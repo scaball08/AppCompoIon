@@ -1,0 +1,56 @@
+<app-header titulo="Fabs"></app-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button color="electron">
+        <ion-icon name="logo-electron"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="python">
+        <ion-icon name="logo-python"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="github">
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="ionic">
+        <ion-icon name="logo-ionic"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="start">
+      <ion-fab-button color="android">
+        <ion-icon name="logo-android"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="react">
+        <ion-icon name="logo-react"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="angular">
+        <ion-icon name="logo-angular"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="github">
+        <ion-icon name="logo-pwa"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data; index as i;">
+      Item #{{i + 1}}
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="electron">
+    <ion-title>
+      este es el Footer
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

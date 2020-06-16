@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-split-pane when="sm" contentId=main>
+    <ion-menu side="start" menuId="primerMenu" contentId="main">
+      <ion-header>
+        <ion-toolbar color="github">
+          <ion-title>Menu Principal</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+
+          <ion-menu-toggle autoHide="false" *ngFor="let c of componentes | async">
+            <!-- se debe importar el RouterModule en el modulo de los componentes-->
+            <ion-item [routerLink]="c.redirecTo" detail>
+              <ion-icon slot="start" [name]="c.icon"></ion-icon>
+              <ion-label>{{c.name}}</ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+  </ion-split-pane>
+</ion-app>

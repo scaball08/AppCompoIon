@@ -1,0 +1,6 @@
+<ion-list>
+  <!-- coloca <detail> para  agregar el efecto de  click  -->
+  <ion-item (click)="onClick( i + 1)" *ngFor="let item of items; index as i;" detail>
+    <ion-label>Item {{i + 1}} </ion-label>
+  </ion-item>
+</ion-list>

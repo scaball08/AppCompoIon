@@ -1,0 +1,34 @@
+<app-header titulo="Listas - Sliding"></app-header>
+
+<ion-content>
+  <ion-list #lista>
+    <ion-item-sliding *ngFor="let user of usuarios | async">
+      <ion-item>
+        <ion-label>
+          <h3>{{user.name}}</h3>
+          <p>{{user.email}}</p>
+        </ion-label>
+        <ion-label slot="end" class="ion-text-right">{{user.phone}}</ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option (click)="ionic(user)" color="ionic">
+          <ion-icon name="logo-ionic"></ion-icon>
+        </ion-item-option>
+
+        <ion-item-option (click)="github(user)" color="github">
+          <ion-icon name="logo-github"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="react(user)" color="react">
+          <ion-icon name="logo-react"></ion-icon>
+        </ion-item-option>
+        <ion-item-option (click)="angular(user)" color="angular">
+          <ion-icon name="logo-angular"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

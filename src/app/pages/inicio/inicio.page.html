@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <!-- Forma 1 -->
+      <!-- <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button> -->
+      <!-- Forma 2 -->
+      <ion-menu-button autoHide="false" color="ionic" menu="primerMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="react">Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <!-- se debe importar el RouterModule -->
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirecTo" detail>
+      <ion-icon slot="start" [name]="c.icon"></ion-icon>
+      <ion-label>{{c.name}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
