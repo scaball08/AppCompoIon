@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class SegmentPage implements OnInit {
   superheroes: Observable<any[]>;
   publisher = '';
-  @ViewChild('segmento', { static: false }) segment: IonSegment;
+  @ViewChild('segmento') segment: IonSegment;
   constructor(private dataService: DataService) {
 
   }
